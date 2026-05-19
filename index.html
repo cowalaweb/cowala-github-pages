@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cowala | Premium Family Milk Powder</title>
+  <style>
+    :root {
+      --navy: #18365d;
+      --blue: #2f7ec8;
+      --sky: #eaf6ff;
+      --mint: #dff5e7;
+      --green: #6dbb73;
+      --yellow: #ffd36c;
+      --coral: #f28c7b;
+      --cream: #fffaf0;
+      --ink: #19314d;
+      --muted: #6b7c90;
+      --line: #dce8f4;
+      --white: #ffffff;
+      --shadow: 0 20px 50px rgba(26, 68, 112, 0.14);
+      --radius: 8px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid transparent;
+      backdrop-filter: blur(16px);
+      transition: border-color 180ms ease, box-shadow 180ms ease;
+    }
+
+    .site-header.is-scrolled {
+      border-color: var(--line);
+      box-shadow: 0 10px 28px rgba(35, 70, 110, 0.08);
+    }
+
+    .nav-wrap {
+      width: min(100% - 40px, var(--max));
+      min-height: 82px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--blue);
+      box-shadow: 0 8px 24px rgba(47, 126, 200, 0.28);
+    }
+
+    .brand-text {
+      font-size: 1.45rem;
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      padding: 10px 12px;
+      border-radius: 999px;
+      color: #36506c;
+      font-size: 0.95rem;
+      font-weight: 700;
+      transition: color 180ms ease, background 180ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+      background: var(--sky);
+    }
+
+    .nav-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      margin: 4px auto;
+      background: currentColor;
+      border-radius: 2px;
+      transition: transform 180ms ease, opacity 180ms ease;
+    }
+
+    .nav-toggle.is-open span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .nav-toggle.is-open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle.is-open span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .section {
+      padding: 92px 0;
+    }
+
+    .container {
+      width: min(100% - 40px, var(--max));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--green);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 650px;
+      margin-bottom: 22px;
+      color: var(--navy);
+      font-size: clamp(2.6rem, 6vw, 5.3rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      color: var(--navy);
+      font-size: 1.24rem;
+      line-height: 1.25;
+    }
+
+    .lead {
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: calc(100vh - 82px);
+      padding: 74px 0 64px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 18% 24%, rgba(255, 211, 108, 0.34), transparent 26%),
+        linear-gradient(135deg, #f6fbff 0%, #e8f6ff 52%, #f8fff3 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -8vw;
+      bottom: -16vw;
+      width: 52vw;
+      height: 52vw;
+      min-width: 520px;
+      min-height: 520px;
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 0.86fr;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .hero-copy {
+      padding-top: 22px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 22px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: var(--blue);
+      box-shadow: 0 14px 28px rgba(47, 126, 200, 0.24);
+    }
+
+    .btn-light {
+      color: var(--navy);
+      background: var(--white);
+      border-color: var(--line);
+    }
+
+    .hero-card {
+      position: relative;
+      padding: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: var(--shadow);
+    }
+
+    .packshot {
+      width: min(100%, 430px);
+      margin: 0 auto;
+      filter: drop-shadow(0 24px 34px rgba(25, 49, 77, 0.18));
+    }
+
+    .hero-badges {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .hero-badges div {
+      min-height: 88px;
+      padding: 14px;
+      border-radius: var(--radius);
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .hero-badges strong {
+      display: block;
+      color: var(--blue);
+      font-size: 1.35rem;
+      line-height: 1;
+    }
+
+    .hero-badges span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.35;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 36px;
+    }
+
+    .section-heading .lead {
+      max-width: 470px;
+      margin-bottom: 0;
+    }
+
+    .about-strip {
+      background: var(--navy);
+      color: var(--white);
+      padding: 34px 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+    }
+
+    .about-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .about-icon {
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--navy);
+      background: var(--yellow);
+      font-weight: 900;
+    }
+
+    .about-item p {
+      margin: 4px 0 0;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.95rem;
+    }
+
+    .products {
+      background: var(--white);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .product-card,
+    .news-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 14px 36px rgba(26, 68, 112, 0.08);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .product-card:hover,
+    .news-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .product-image {
+      padding: 28px;
+      background: linear-gradient(145deg, var(--sky), var(--mint));
+    }
+
+    .product-body,
+    .news-body {
+      padding: 24px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      color: var(--blue);
+      background: var(--sky);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .product-body p,
+    .news-body p {
+      color: var(--muted);
+    }
+
+    .quality {
+      background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+    }
+
+    .quality-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .quality-visual {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .quality-visual img {
+      width: 100%;
+    }
+
+    .quality-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .quality-point {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+    }
+
+    .quality-point span {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--green);
+      font-weight: 900;
+    }
+
+    .quality-point p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .news {
+      background: var(--cream);
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .news-image {
+      aspect-ratio: 1.45;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .news-meta {
+      margin-bottom: 10px;
+      color: var(--coral);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      background:
+        linear-gradient(rgba(24, 54, 93, 0.88), rgba(24, 54, 93, 0.88)),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='720' viewBox='0 0 1200 720'%3E%3Crect width='1200' height='720' fill='%23eaf6ff'/%3E%3Cpath d='M0 430 C180 340 320 520 500 430 S820 250 1200 340 V720 H0 Z' fill='%23dff5e7'/%3E%3Ccircle cx='240' cy='230' r='86' fill='%23ffd36c'/%3E%3Crect x='695' y='178' width='320' height='320' rx='8' fill='%23ffffff' opacity='.72'/%3E%3C/svg%3E");
+      background-size: cover;
+      color: var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 46px;
+      align-items: start;
+    }
+
+    .contact h2,
+    .contact h3 {
+      color: var(--white);
+    }
+
+    .contact .lead {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .contact-details div {
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .contact-details strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 14px;
+      padding: 26px;
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .contact-form label {
+      display: grid;
+      gap: 7px;
+      color: var(--ink);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 13px 14px;
+      color: var(--ink);
+      background: #fbfdff;
+      outline: none;
+      transition: border-color 180ms ease, box-shadow 180ms ease;
+    }
+
+    .contact-form textarea {
+      min-height: 124px;
+      resize: vertical;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 4px rgba(47, 126, 200, 0.12);
+    }
+
+    .site-footer {
+      padding: 28px 0;
+      color: var(--muted);
+      background: #f8fbff;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-wrap {
+      width: min(100% - 40px, var(--max));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 940px) {
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 82px;
+        left: 20px;
+        right: 20px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--white);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links a {
+        border-radius: var(--radius);
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid,
+      .quality-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        order: -1;
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .about-grid,
+      .product-grid,
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .nav-wrap,
+      .container,
+      .footer-wrap {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .brand-text {
+        font-size: 1.22rem;
+      }
+
+      .section {
+        padding: 66px 0;
+      }
+
+      .hero {
+        padding: 36px 0 54px;
+      }
+
+      .hero-card {
+        padding: 18px;
+      }
+
+      .hero-actions,
+      .field-grid {
+        grid-template-columns: 1fr;
+        display: grid;
+      }
+
+      .hero-badges {
+        grid-template-columns: 1fr;
+      }
+
+      .quality-point {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="nav-wrap">
+      <a class="brand" href="#home" aria-label="Cowala home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 13.4C7 8.7 10.9 5 15.9 5C21 5 25 8.8 25 13.8C25 21.2 18 27 16 27C14 27 7 21 7 13.4Z" fill="currentColor"/>
+            <path d="M10.7 12.5C12.8 12.2 14.5 10.8 15.3 8.8C16.7 11.2 19.1 12.8 22 13C21.8 17.1 19.2 20.6 16 22.9C12.9 20.5 10.7 17.1 10.7 12.5Z" fill="#ffffff"/>
+          </svg>
+        </span>
+        <span class="brand-text">Cowala</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#product">Product</a>
+        <a href="#quality">Quality</a>
+        <a href="#news">News</a>
+        <a href="#tips">Tips</a>
+        <a href="#contact">Contact us</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">New Zealand family nutrition</p>
+          <h1>Gentle milk powder for growing family moments.</h1>
+          <p class="lead">Cowala brings a fresh, caring dairy story to everyday nutrition with clean ingredients, bright packaging, and dependable quality for families.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#product">Explore Products</a>
+            <a class="btn btn-light" href="#quality">Our Quality</a>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="Cowala product preview">
+          <img class="packshot" alt="Placeholder Cowala milk powder tin" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='620' viewBox='0 0 520 620'%3E%3Crect width='520' height='620' fill='none'/%3E%3Cellipse cx='260' cy='570' rx='150' ry='30' fill='%2319365d' opacity='.12'/%3E%3Cpath d='M151 105h218l-22 438H173L151 105Z' fill='%23ffffff' stroke='%23cfe2f3' stroke-width='4'/%3E%3Cellipse cx='260' cy='105' rx='109' ry='34' fill='%23f8fbff' stroke='%23cfe2f3' stroke-width='4'/%3E%3Cpath d='M169 272c48-50 111-55 177-13l-10 190H184l-15-177Z' fill='%23eaf6ff'/%3E%3Cpath d='M182 349c41-29 79-28 118 1 19 14 38 17 59 7l-6 92H185l-3-100Z' fill='%23dff5e7'/%3E%3Ccircle cx='355' cy='191' r='42' fill='%23ffd36c'/%3E%3Ctext x='260' y='205' fill='%2318365d' font-family='Arial, Helvetica, sans-serif' font-size='56' font-weight='800' text-anchor='middle'%3ECowala%3C/text%3E%3Ctext x='260' y='252' fill='%232f7ec8' font-family='Arial, Helvetica, sans-serif' font-size='22' font-weight='700' text-anchor='middle'%3EPremium Milk Powder%3C/text%3E%3Crect x='205' y='396' width='110' height='42' rx='21' fill='%232f7ec8'/%3E%3Ctext x='260' y='424' fill='white' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='700' text-anchor='middle'%3EStage 3%3C/text%3E%3C/svg%3E">
+          <div class="hero-badges">
+            <div><strong>NZ</strong><span>Inspired dairy source</span></div>
+            <div><strong>3+</strong><span>Family stage options</span></div>
+            <div><strong>365</strong><span>Everyday nutrition care</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-strip" id="about">
+      <div class="container about-grid">
+        <div class="about-item">
+          <span class="about-icon">1</span>
+          <div>
+            <strong>Family first</strong>
+            <p>Warm, practical nutrition designed for parents choosing daily dairy essentials.</p>
+          </div>
+        </div>
+        <div class="about-item">
+          <span class="about-icon">2</span>
+          <div>
+            <strong>Clean visual identity</strong>
+            <p>Bright blue, soft green, and gentle yellow cues create a trustworthy shelf presence.</p>
+          </div>
+        </div>
+        <div class="about-item">
+          <span class="about-icon">3</span>
+          <div>
+            <strong>Quality mindset</strong>
+            <p>Clear process steps and careful handling support consistent product confidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products" id="product">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Product</p>
+            <h2>Milk powder made for every stage.</h2>
+          </div>
+          <p class="lead">A simple product family with gentle colours, soft landscape cues, and easy-to-read stage labelling.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image">
+              <img alt="Placeholder infant formula product" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='360' viewBox='0 0 420 360'%3E%3Crect width='420' height='360' rx='8' fill='%23f8fbff'/%3E%3Cpath d='M0 245c67-35 117-28 170 0s101 33 250-22v137H0z' fill='%23dff5e7'/%3E%3Cpath d='M142 65h136l-16 238H158L142 65Z' fill='%23fff' stroke='%23cfe2f3' stroke-width='4'/%3E%3Cellipse cx='210' cy='65' rx='68' ry='20' fill='%23fff' stroke='%23cfe2f3' stroke-width='4'/%3E%3Ccircle cx='264' cy='123' r='25' fill='%23ffd36c'/%3E%3Ctext x='210' y='143' fill='%2318365d' font-family='Arial' font-size='32' font-weight='800' text-anchor='middle'%3ECowala%3C/text%3E%3Ctext x='210' y='182' fill='%232f7ec8' font-family='Arial' font-size='18' font-weight='700' text-anchor='middle'%3EStage 1%3C/text%3E%3C/svg%3E">
+            </div>
+            <div class="product-body">
+              <span class="tag">Stage 1</span>
+              <h3>Infant Formula</h3>
+              <p>Soft starter nutrition packaging for the youngest members of the family range.</p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img alt="Placeholder follow-on formula product" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='360' viewBox='0 0 420 360'%3E%3Crect width='420' height='360' rx='8' fill='%23fffaf0'/%3E%3Cpath d='M0 233c84-26 150-11 198 15s105 21 222-34v146H0z' fill='%23eaf6ff'/%3E%3Cpath d='M142 65h136l-16 238H158L142 65Z' fill='%23fff' stroke='%23cfe2f3' stroke-width='4'/%3E%3Cellipse cx='210' cy='65' rx='68' ry='20' fill='%23fff' stroke='%23cfe2f3' stroke-width='4'/%3E%3Ccircle cx='263' cy='123' r='25' fill='%23f28c7b'/%3E%3Ctext x='210' y='143' fill='%2318365d' font-family='Arial' font-size='32' font-weight='800' text-anchor='middle'%3ECowala%3C/text%3E%3Ctext x='210' y='182' fill='%232f7ec8' font-family='Arial' font-size='18' font-weight='700' text-anchor='middle'%3EStage 2%3C/text%3E%3C/svg%3E">
+            </div>
+            <div class="product-body">
+              <span class="tag">Stage 2</span>
+              <h3>Follow-on Formula</h3>
+              <p>Balanced family-friendly presentation with warm accents and everyday clarity.</p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img alt="Placeholder toddler milk drink product" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='360' viewBox='0 0 420 360'%3E%3Crect width='420' height='360' rx='8' fill='%23f6fbff'/%3E%3Cpath d='M0 240c61-41 128-34 201 5 64 34 127 13 219-37v152H0z' fill='%23dff5e7'/%3E%3Cpath d='M142 65h136l-16 238H158L142 65Z' fill='%23fff' stroke='%23cfe2f3' stroke-width='4'/%3E%3Cellipse cx='210' cy='65' rx='68' ry='20' fill='%23fff' stroke='%23cfe2f3' stroke-width='4'/%3E%3Ccircle cx='263' cy='123' r='25' fill='%236dbb73'/%3E%3Ctext x='210' y='143' fill='%2318365d' font-family='Arial' font-size='32' font-weight='800' text-anchor='middle'%3ECowala%3C/text%3E%3Ctext x='210' y='182' fill='%232f7ec8' font-family='Arial' font-size='18' font-weight='700' text-anchor='middle'%3EStage 3%3C/text%3E%3C/svg%3E">
+            </div>
+            <div class="product-body">
+              <span class="tag">Stage 3</span>
+              <h3>Toddler Milk Drink</h3>
+              <p>A confident growth-stage product block with playful colour and strong brand recall.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quality" id="quality">
+      <div class="container quality-grid">
+        <div class="quality-visual">
+          <img alt="Placeholder dairy farm quality scene" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='680' height='560' viewBox='0 0 680 560'%3E%3Crect width='680' height='560' fill='%23eaf6ff'/%3E%3Ccircle cx='532' cy='112' r='66' fill='%23ffd36c'/%3E%3Cpath d='M0 292c102-74 192-94 295-36 78 43 161 44 242-7 46-29 93-43 143-42v353H0z' fill='%23dff5e7'/%3E%3Cpath d='M0 382c137-54 249-48 336 17 89 67 191 53 344-35v196H0z' fill='%236dbb73' opacity='.72'/%3E%3Crect x='258' y='210' width='142' height='98' rx='8' fill='%23ffffff'/%3E%3Cpath d='M238 218l91-72 91 72z' fill='%23f28c7b'/%3E%3Crect x='309' y='254' width='40' height='54' fill='%232f7ec8'/%3E%3Cpath d='M80 360h91v43H80zM98 324h54v36H98z' fill='%23ffffff'/%3E%3Ccircle cx='104' cy='405' r='13' fill='%2318365d'/%3E%3Ccircle cx='148' cy='405' r='13' fill='%2318365d'/%3E%3C/svg%3E">
+        </div>
+
+        <div>
+          <p class="eyebrow">Quality</p>
+          <h2>From careful sourcing to confident shelves.</h2>
+          <p class="lead">Cowala’s homepage language and layout highlight reassurance: clean sourcing cues, simple quality steps, and a calm brand world for family decisions.</p>
+
+          <div class="quality-list">
+            <div class="quality-point">
+              <span>01</span>
+              <div>
+                <h3>Selected dairy base</h3>
+                <p>Ingredient stories are presented with open space, soft farm imagery, and practical benefit-led copy.</p>
+              </div>
+            </div>
+            <div class="quality-point">
+              <span>02</span>
+              <div>
+                <h3>Clear production care</h3>
+                <p>Quality messaging is structured into readable steps so parents can scan and understand quickly.</p>
+              </div>
+            </div>
+            <div class="quality-point">
+              <span>03</span>
+              <div>
+                <h3>Family-ready packaging</h3>
+                <p>Product cards keep the stage, name, and usage context visible without visual clutter.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section news" id="news">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">News</p>
+            <h2>Brand updates and family notes.</h2>
+          </div>
+          <p class="lead">Placeholder editorial cards for product launches, dairy stories, and parent-friendly nutrition content.</p>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card">
+            <img class="news-image" alt="Placeholder family breakfast article" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='360' viewBox='0 0 520 360'%3E%3Crect width='520' height='360' fill='%23eaf6ff'/%3E%3Ccircle cx='406' cy='82' r='48' fill='%23ffd36c'/%3E%3Crect x='72' y='162' width='376' height='92' rx='8' fill='%23ffffff'/%3E%3Ccircle cx='159' cy='151' r='44' fill='%23f28c7b'/%3E%3Ccircle cx='259' cy='142' r='54' fill='%236dbb73'/%3E%3Ccircle cx='361' cy='151' r='44' fill='%232f7ec8'/%3E%3Cpath d='M0 270c83-42 174-42 274 0s182 32 246-5v95H0z' fill='%23dff5e7'/%3E%3C/svg%3E">
+            <div class="news-body">
+              <p class="news-meta">Brand News</p>
+              <h3>Cowala introduces a brighter family nutrition look</h3>
+              <p>A modern homepage system with clear content blocks and soft premium dairy styling.</p>
+            </div>
+          </article>
+
+          <article class="news-card" id="tips">
+            <img class="news-image" alt="Placeholder parenting tips article" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='360' viewBox='0 0 520 360'%3E%3Crect width='520' height='360' fill='%23fffaf0'/%3E%3Cpath d='M0 236c102-35 173-21 243 12 87 40 166 23 277-32v144H0z' fill='%23eaf6ff'/%3E%3Crect x='120' y='74' width='280' height='178' rx='8' fill='%23ffffff' stroke='%23dce8f4' stroke-width='4'/%3E%3Cpath d='M156 119h208M156 158h150M156 197h184' stroke='%232f7ec8' stroke-width='12' stroke-linecap='round'/%3E%3Ccircle cx='393' cy='82' r='38' fill='%236dbb73'/%3E%3C/svg%3E">
+            <div class="news-body">
+              <p class="news-meta">Tips</p>
+              <h3>Simple routines for everyday family nourishment</h3>
+              <p>Use this area for practical feeding, storage, and preparation tips once content is ready.</p>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <img class="news-image" alt="Placeholder dairy quality article" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='360' viewBox='0 0 520 360'%3E%3Crect width='520' height='360' fill='%23f6fbff'/%3E%3Ccircle cx='110' cy='93' r='48' fill='%23ffd36c'/%3E%3Cpath d='M0 255c89-71 172-76 272-15 78 47 154 34 248-28v148H0z' fill='%23dff5e7'/%3E%3Cpath d='M183 158h154l-18 116H201l-18-116Z' fill='%23ffffff' stroke='%23cfe2f3' stroke-width='4'/%3E%3Cellipse cx='260' cy='158' rx='77' ry='22' fill='%23ffffff' stroke='%23cfe2f3' stroke-width='4'/%3E%3Ctext x='260' y='221' fill='%2318365d' font-family='Arial' font-size='28' font-weight='800' text-anchor='middle'%3ENZ%3C/text%3E%3C/svg%3E">
+            <div class="news-body">
+              <p class="news-meta">Quality</p>
+              <h3>How sourcing stories build trust on the shelf</h3>
+              <p>Future articles can connect product quality with the calm, friendly Cowala visual system.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s talk about Cowala.</h2>
+          <p class="lead">Use this section for distributor enquiries, customer care, retail partnerships, and brand contact details.</p>
+          <div class="contact-details">
+            <div>
+              <strong>Email</strong>
+              hello@cowala.example
+            </div>
+            <div>
+              <strong>Phone</strong>
+              +64 000 000 000
+            </div>
+            <div>
+              <strong>Location</strong>
+              Auckland, New Zealand
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="field-grid">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required>
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@example.com" required>
+            </label>
+          </div>
+          <label>
+            Subject
+            <input type="text" name="subject" placeholder="How can we help?">
+          </label>
+          <label>
+            Message
+            <textarea name="message" placeholder="Write your message"></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <span>© 2026 Cowala. All rights reserved.</span>
+      <span>Premium family milk powder brand concept.</span>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById("siteHeader");
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+    const contactForm = document.getElementById("contactForm");
+
+    const setHeaderState = () => {
+      header.classList.toggle("is-scrolled", window.scrollY > 8);
+    };
+
+    navToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("is-open");
+      navToggle.classList.toggle("is-open", isOpen);
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+      navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+    });
+
+    navLinks.addEventListener("click", (event) => {
+      if (event.target.matches("a")) {
+        navLinks.classList.remove("is-open");
+        navToggle.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "Open navigation");
+      }
+    });
+
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      contactForm.reset();
+    });
+
+    setHeaderState();
+    window.addEventListener("scroll", setHeaderState, { passive: true });
+  </script>
+</body>
+</html>
