@@ -58,35 +58,40 @@
       background: rgba(250, 250, 250, 0.96);
       border-bottom: 1px solid #dedede;
     }
-
+    
     .header-inner {
-      width: min(100% - 32px, var(--max));
-      height: 78px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
+    width: min(100% - 32px, var(--max));
+    height: 78px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
     }
+
+    
 
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      min-width: 245px;
-    }
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 220px;
+   }
 
     .brand img {
-      width: 126px;
-      height: auto;
-    }
+    width: 126px;
+    height: auto;
+    transform: scale(0.45);
+    transform-origin: left center;
+  }
 
     .brand-note {
-      padding-left: 13px;
+      padding-left: 14px;
       border-left: 1px solid #d6d6d6;
-      color: #6d6d6d;
-      font-size: 13px;
-      line-height: 1.25;
+      color: #555;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.15;
       white-space: nowrap;
     }
 
@@ -440,7 +445,7 @@
       }
 
       .brand img {
-        width: 112px;
+        width: 48px;
       }
 
       .nav-toggle {
@@ -535,15 +540,23 @@
         gap: 12px 18px;
       }
     }
+
+.site-header .brand img {
+    width: 52px !important;
+    max-width: 52px !important;
+    height: auto !important;
+    transform: none !important;
+}
+
   </style>
 </head>
 <body>
   <div class="page">
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="#home" aria-label="Cowala home">
-          <img src="assets/images/cowala-logo.png" alt="Cowala">
-          <span class="brand-note">Cowala product</span>
+        <a class="brand" href="index.html" aria-label="Cowala home">
+    <img src="assets/images/cowala-logo.jpg" alt="Cowala">
+    <span class="brand-note">Cowala product</span>
         </a>
 
         <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
@@ -553,11 +566,17 @@
         </button>
 
         <nav class="nav-links" aria-label="Primary navigation">
-          <a class="is-active" href="index.html">Home</a>
+          
+          <a href="index.html">Home</a>
+
           <a href="about.html">Why Cowala</a>
           <a href="product.html">Products</a>
           <a href="quality.html">Quality</a>
-          <a href="news.html">News</a>
+
+
+          
+          <a class="is-active" href="index.html">Home</a>
+
           <a href="contact.html">Contact</a>
         </nav>
       </div>
@@ -582,7 +601,7 @@
           </div>
           <div class="why-product" aria-label="Cowala product showcase">
             <div class="pack">
-              <img src="assets/images/cowala-logo.png" alt="Cowala logo">
+              <img src="assets/images/cowala-logo.jpg" alt="Cowala logo">
               <strong>Cowala Family</strong>
               <small>Milk Powder</small>
             </div>
@@ -681,7 +700,7 @@
     <footer class="footer-bar">
       <div class="footer-inner">
         <div class="footer-logo">
-          <img src="assets/images/cowala-logo.png" alt="Cowala">
+          <img assets/images/cowala-logo.jpg alt="Cowala">
           <span>Cowala product</span>
         </div>
         <div class="footer-links">
