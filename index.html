@@ -223,9 +223,9 @@
     }
 
     .pack {
-      width: 185px;
-      min-height: 230px;
-      padding: 28px 18px 22px;
+      width: 320px;
+      min-height: auto;
+      padding: 12px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -237,7 +237,7 @@
     }
 
     .pack img {
-      width: 140px;
+      width: 100%;
       margin: 0 auto 16px;
     }
 
@@ -264,13 +264,13 @@
     .showcase-panel {
       min-height: 300px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       align-items: center;
       gap: 34px;
-      padding: 36px 42px;
+      padding: 28px;
       background: #f5fbff;
       border: 1px solid #dbeaf1;
-      text-align: left;
+      text-align: center;
     }
 
     .showcase h3 {
@@ -288,13 +288,13 @@
     .product-cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      margin-top: 28px;
+      gap: 16px;
+      margin-top: 18px;
     }
 
     .product-card {
-      min-height: 260px;
-      padding: 24px 18px 22px;
+      min-height: 210px;
+      padding: 14px 10px 14px;
       background: #fff;
       border: 1px solid #e1e1e1;
       text-align: center;
@@ -363,9 +363,9 @@
     }
 
     .grid-item:nth-child(3) .grid-photo img {
-      width: 86px;
+      width: 100%;
       height: auto;
-      object-fit: contain;
+      object-fit: cover;
     }
 
     .grid-copy {
@@ -589,7 +589,7 @@
         <h2 class="section-title">Cowala Product</h2>
         <div class="showcase-panel">
           <div class="pack">
-            <img src="assets/images/cowala-logo.png" alt="Cowala product pack">
+            <img src="assets/images/product-showcase.jpg" alt="Cowala milk products">
             <strong>Premium Cowala</strong>
             <small>Family Milk</small>
           </div>
@@ -605,7 +605,7 @@
         <div class="product-cards" aria-label="Cowala products">
           <article class="product-card">
             <div class="pack">
-              <img src="assets/images/cowala-logo.png" alt="Cowala family product">
+              <img src="assets/images/product-01.jpg" alt="Infant Formula">
               <strong>Family</strong>
             </div>
             <h3>Cowala Family Milk</h3>
@@ -613,7 +613,7 @@
           </article>
           <article class="product-card">
             <div class="pack">
-              <img src="assets/images/cowala-logo.png" alt="Cowala nutrition product">
+              <img src="assets/images/product-02.jpg" alt="Adult Formula">
               <strong>Nutrition</strong>
             </div>
             <h3>Cowala Nutrition</h3>
@@ -621,7 +621,7 @@
           </article>
           <article class="product-card">
             <div class="pack">
-              <img src="assets/images/cowala-logo.png" alt="Cowala premium product">
+              <img src="assets/images/product-03.jpg" alt="Goat Milk">
               <strong>Premium</strong>
             </div>
             <h3>Cowala Premium</h3>
@@ -635,7 +635,7 @@
         <div class="image-grid">
           <article class="grid-item">
             <div class="grid-photo">
-              <img src="assets/images/hero-family.jpg" alt="Cowala quality">
+              <img src="assets/images/quality.jpg" alt="Cowala quality">
             </div>
             <div class="grid-copy">
               <h3>Quality</h3>
@@ -644,7 +644,7 @@
           </article>
           <article class="grid-item" id="news">
             <div class="grid-photo">
-              <img src="assets/images/hero-family.jpg" alt="Cowala news">
+              <img src="assets/images/news.jpg" alt="Cowala news">
             </div>
             <div class="grid-copy">
               <h3>News</h3>
@@ -653,7 +653,7 @@
           </article>
           <article class="grid-item">
             <div class="grid-photo">
-              <img src="assets/images/cowala-logo.png" alt="Cowala Q and A">
+              <img src="assets/images/qa.jpg" alt="Cowala Q and A">
             </div>
             <div class="grid-copy">
               <h3>Q&amp;A</h3>
@@ -662,7 +662,7 @@
           </article>
           <article class="grid-item" id="contact">
             <div class="grid-photo">
-              <img src="assets/images/hero-family.jpg" alt="Cowala contact">
+              <img src="assets/images/contact.jpg" alt="Cowala contact">
             </div>
             <div class="grid-copy">
               <h3>Contact</h3>
