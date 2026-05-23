@@ -4,7 +4,8 @@ const path = require("path");
 
 const root = __dirname;
 const port = Number(process.env.PORT || 8000);
-const host = "127.0.0.1";
+const host = "0.0.0.0";
+const lanHint = process.env.LAN_IP || "192.168.1.108";
 const types = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
@@ -42,5 +43,7 @@ http
     });
   })
   .listen(port, host, () => {
-    console.log(`Serving ${root} at http://${host}:${port}/`);
+    console.log(`Serving ${root}`);
+    console.log(`Local: http://127.0.0.1:${port}/`);
+    console.log(`LAN:   http://${lanHint}:${port}/`);
   });
