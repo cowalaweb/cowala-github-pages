@@ -16,9 +16,9 @@
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="primary-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
-        <a class="primary-nav__parent" href="about.html">About Us</a>
-        <a class="primary-nav__parent" href="product.html">Product</a>
-        <a class="primary-nav__parent" href="quality.html">Quality</a>
+        <div class="nav-item"><a class="primary-nav__parent" href="about.html">About Us</a><div class="nav-dropdown"><a href="our-story.html">Our Story</a><a href="our-vision-and-value.html">Our Vision and Value</a><a href="our-business.html">Our Business</a><a href="our-history.html">Our History</a></div></div>
+        <div class="nav-item"><a class="primary-nav__parent" href="product.html">Product</a><div class="nav-dropdown"><a href="infant-formula.html">Infant formula</a><a href="adult-formula.html">Adult formula</a></div></div>
+        <div class="nav-item"><a class="primary-nav__parent" href="quality.html">Quality</a><div class="nav-dropdown"><a href="our-quality-system.html">Our Quality System</a><a href="our-traceability-system.html">Our Traceability System</a><a href="our-certification.html">Our Certification</a></div></div>
         <a href="news.html">News</a>
         <a href="tips.html">Tips</a>
         <a href="contact.html">Contact us</a>
@@ -32,32 +32,20 @@
     </div>
     <section class="subpage-content">
       <h1 class="subpage-title">Our Product</h1>
-      <p>Cowala and all its supplier use the best resources to produce the highest quality products, and our product formulations are strictly controlled to ensure consistent production standards are maintained.</p>
+      <p class="subpage-lead">Cowala and all its supplier use the best resources to produce the highest quality products, and our product formulations are strictly controlled to ensure consistent production standards are maintained.</p>
       <section class="subpage-section">
-        <div class="product-list">
-          <article class="media-card">
-            <img src="assets/images/figma-home/product-01-1.png" alt="Cowala infant formula">
+        <div class="product-grid">
+          <article class="product-card">
+            <a href="infant-formula.html"><img class="product-card__photo" src="assets/images/figma-home/product-01-1.png" alt="Cowala infant formula"></a>
             <img class="label-strip" src="assets/images/figma-home/icons-01.png" alt="Infant Formula">
-            <div class="media-card__body">
-              <h2>Infant Formula</h2>
-              <p>Formula products presented for growing family nutrition.</p>
-            </div>
           </article>
-          <article class="media-card">
-            <img src="assets/images/figma-home/product-02.png" alt="Cowala adult formula">
+          <article class="product-card">
+            <a href="adult-formula.html"><img class="product-card__photo" src="assets/images/figma-home/product-02.png" alt="Cowala adult formula"></a>
             <img class="label-strip" src="assets/images/figma-home/icons-02.png" alt="Adult Formula">
-            <div class="media-card__body">
-              <h2>Adult Formula</h2>
-              <p>Everyday dairy nutrition and milk powder products for family homes.</p>
-            </div>
           </article>
-          <article class="media-card">
-            <img src="assets/images/figma-home/product-03.png" alt="Cowala goat milk powder">
+          <article class="product-card">
+            <a href="product.html"><img class="product-card__photo" src="assets/images/figma-home/product-03.png" alt="Cowala goat milk powder"></a>
             <img class="label-strip" src="assets/images/figma-home/icons-03.png" alt="Goat Milk">
-            <div class="media-card__body">
-              <h2>Goat Milk</h2>
-              <p>A premium goat milk powder option in the Cowala range.</p>
-            </div>
           </article>
         </div>
       </section>
