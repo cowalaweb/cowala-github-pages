@@ -785,6 +785,20 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-toggle {
+    margin-left: auto;
+    position: static;
+    float: none;
+  }
+}
+
 @media (max-width: 640px) {
   .brand__text {
     display: none;
