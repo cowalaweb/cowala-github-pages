@@ -351,6 +351,10 @@ a {
   padding: 40px 10px 54px;
 }
 
+.about-page-main {
+  padding-bottom: 28px;
+}
+
 .subpage-hero {
   width: 100%;
   max-width: 918px;
@@ -385,27 +389,27 @@ a {
   margin: 0 0 14px;
 }
 
-.about-next-link {
+.about-bottom-image {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-height: 96px;
-  margin: 18px auto 0;
-  padding: 6px 0 0;
+  margin: 10px 0 0;
+  padding: 6px 0;
 }
 
-.about-next-link a {
+.about-bottom-image a {
   display: flex;
   justify-content: center;
   align-items: center;
   width: min(100%, 320px);
 }
 
-.about-next-link__image {
+.about-bottom-image img {
   display: block;
   width: 100%;
   max-width: 320px;
   height: auto;
+  margin: 0 auto;
   object-fit: contain;
 }
 
@@ -1230,17 +1234,16 @@ a {
     max-width: 92%;
   }
 
-  body:has(.subpage-hero img[alt="Our Story"]) .about-next-link {
-    max-height: none;
-    margin-top: 22px;
-    padding-top: 0;
+  body:has(.subpage-hero img[alt="Our Story"]) .about-bottom-image {
+    margin-top: 16px;
+    padding: 8px 0;
   }
 
-  body:has(.subpage-hero img[alt="Our Story"]) .about-next-link a {
+  body:has(.subpage-hero img[alt="Our Story"]) .about-bottom-image a {
     width: min(80%, 260px);
   }
 
-  body:has(.subpage-hero img[alt="Our Story"]) .about-next-link__image {
+  body:has(.subpage-hero img[alt="Our Story"]) .about-bottom-image img {
     max-width: 260px;
   }
 }
