@@ -950,3 +950,99 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  body:has(.subpage-hero img[alt="Our Story"]) .subpage-main,
+  body:has(.subpage-hero img[alt="Cowala quality"]) .subpage-main {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-page-main {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 72px;
+    overflow-x: hidden;
+  }
+
+  .news-hero,
+  .news-title-band {
+    box-sizing: border-box;
+    width: 94%;
+    max-width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+  }
+
+  .news-hero img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .news-title-band {
+    min-height: auto;
+    padding: 16px 18px 18px;
+  }
+
+  .news-title-band h1 {
+    white-space: nowrap;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero,
+  .contact-panel {
+    box-sizing: border-box;
+    width: 94% !important;
+    max-width: 94% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow: hidden;
+  }
+
+  .contact-hero img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .contact-panel {
+    padding: 0 16px 24px !important;
+    font-size: 14px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-panel__title {
+    margin-left: -16px !important;
+    margin-right: -16px !important;
+    padding: 18px 16px 16px !important;
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .contact-panel__body {
+    max-width: 100% !important;
+    padding-top: 16px !important;
+  }
+
+  .contact-panel__body h2 {
+    margin-bottom: 10px !important;
+    font-size: 19px !important;
+    line-height: 1.35 !important;
+  }
+
+  .contact-panel__body p {
+    margin-bottom: 10px;
+    line-height: 1.55;
+  }
+}
