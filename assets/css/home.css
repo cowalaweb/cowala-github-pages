@@ -651,6 +651,20 @@ a {
 }
 
 @media (min-width: 769px) {
+  .certification-page .quality-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .certification-page .certification-card {
+    flex: 0 1 calc(50% - 12px);
+    max-width: calc(50% - 12px);
+  }
+}
+
+@media (min-width: 769px) {
   .quality-page .subpage-main,
   .quality-system-page .subpage-main {
     max-width: var(--container-wide);
