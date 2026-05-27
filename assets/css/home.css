@@ -650,6 +650,96 @@ a {
   object-fit: contain;
 }
 
+@media (min-width: 769px) {
+  .quality-page .subpage-main,
+  .quality-system-page .subpage-main {
+    max-width: var(--container-wide);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    overflow: visible;
+  }
+
+  .quality-page .subpage-content,
+  .quality-system-page .subpage-content {
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
+  }
+
+  .quality-page .subpage-hero,
+  .quality-system-page .subpage-hero {
+    max-width: 918px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .quality-page .subpage-hero img,
+  .quality-system-page .subpage-hero img,
+  .quality-page .simple-image-grid img,
+  .quality-system-page .quality-figure img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .quality-page .subpage-hero img,
+  .quality-system-page .subpage-hero img {
+    max-height: 430px;
+    aspect-ratio: auto;
+  }
+
+  .quality-page .simple-image-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 34px;
+  }
+
+  .quality-page .simple-image-grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .quality-page .simple-image-grid a:nth-child(3) {
+    display: none;
+  }
+
+  .quality-page .simple-image-grid img {
+    width: auto;
+    max-height: 360px;
+    aspect-ratio: auto;
+  }
+
+  .quality-system-page .quality-figure-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 42px;
+    margin-top: 34px;
+  }
+
+  .quality-system-page .quality-figure {
+    min-width: 0;
+    margin: 0;
+  }
+
+  .quality-system-page .quality-figure h2 {
+    min-height: 26px;
+  }
+
+  .quality-system-page .quality-figure img {
+    width: auto;
+    max-height: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    aspect-ratio: auto;
+  }
+}
+
 .news-page-main {
   width: 100%;
   max-width: var(--container-wide);
@@ -686,6 +776,41 @@ a {
   font-size: 22.5px;
   font-weight: 400;
   line-height: 22.5px;
+}
+
+@media (min-width: 769px) {
+  .news-page-main {
+    max-width: var(--container-wide);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 20px 54px;
+  }
+
+  .news-hero {
+    width: 100%;
+    max-width: 1100px;
+    height: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+  }
+
+  .news-hero img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center bottom;
+  }
+
+  .news-title-band {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 74px;
+    margin: 0 auto;
+    padding: 22px 30px 0;
+  }
 }
 
 .tips-page-main {
@@ -738,6 +863,86 @@ a {
   width: 100%;
   aspect-ratio: 429 / 366.44;
   object-fit: cover;
+}
+
+@media (min-width: 769px) {
+  .contact-panel .contact-panel__body {
+    max-width: 820px !important;
+  }
+
+  .contact-panel .contact-panel__body p,
+  .contact-panel .contact-panel__body a,
+  .contact-panel .contact-panel__body strong {
+    font-size: 22px;
+    line-height: 1.6;
+    font-weight: 600;
+  }
+
+  .contact-panel .contact-panel__body p {
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: 769px) {
+  .tips-page-main {
+    width: 100%;
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 20px 54px;
+  }
+
+  .tips-hero,
+  .tips-panel {
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tips-hero {
+    height: 420px;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+
+  .tips-hero img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .tips-panel {
+    padding: 20px 24px 32px;
+  }
+
+  .tips-panel h1 {
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .tips-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  .tips-card {
+    min-width: 0;
+    overflow: visible;
+  }
+
+  .tips-card img {
+    width: 100%;
+    max-width: 100%;
+    height: 360px;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center bottom;
+  }
 }
 
 @media (max-width: 1100px) {
