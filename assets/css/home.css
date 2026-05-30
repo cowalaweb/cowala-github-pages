@@ -827,6 +827,238 @@ a {
   }
 }
 
+.infant-formula-page .infant-product-main {
+  max-width: 1100px;
+  padding: 40px 20px 64px;
+}
+
+.infant-formula-page .infant-product-hero,
+.infant-formula-page .infant-product-content {
+  max-width: 1100px;
+}
+
+.infant-formula-page .infant-product-hero {
+  margin-bottom: 34px;
+}
+
+.infant-formula-page .infant-product-hero img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+.infant-formula-page .subpage-title {
+  margin-bottom: 16px;
+}
+
+.infant-formula-page .subpage-lead {
+  max-width: 900px;
+  margin-bottom: 34px;
+}
+
+.infant-intro-image {
+  margin: 0 auto 34px;
+}
+
+.infant-intro-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.infant-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0 auto 46px;
+}
+
+.infant-category-card {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(200, 149, 45, 0.35);
+}
+
+.infant-category-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.infant-stage-section {
+  padding: 0 0 42px;
+}
+
+.infant-stage-section + .infant-stage-section {
+  padding-top: 6px;
+}
+
+.infant-stage-section h2 {
+  margin: 0 0 28px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  color: var(--color-gold);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.infant-product-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+  gap: 42px;
+  align-items: center;
+  padding: 0 0 34px;
+  margin-bottom: 34px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.infant-product-row:last-child {
+  margin-bottom: 0;
+}
+
+.infant-product-row__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.infant-product-row__media img {
+  width: auto;
+  max-width: 260px;
+  max-height: 320px;
+  object-fit: contain;
+}
+
+.infant-product-row__body {
+  min-width: 0;
+}
+
+.infant-product-row__body h3 {
+  margin: 0 0 8px;
+  color: var(--color-gold);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.infant-product-stage {
+  margin-bottom: 14px;
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.infant-product-age {
+  margin-top: 16px;
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .infant-formula-page .infant-product-main {
+    width: 100%;
+    max-width: 100%;
+    padding: 28px 18px 54px;
+    overflow: hidden;
+  }
+
+  .infant-formula-page .infant-product-hero,
+  .infant-formula-page .infant-product-content {
+    width: min(520px, calc(100vw - 36px));
+    max-width: calc(100vw - 36px);
+    overflow-wrap: break-word;
+  }
+
+  .infant-formula-page .infant-product-hero {
+    margin-bottom: 26px;
+  }
+
+  .infant-formula-page .infant-product-hero img,
+  .infant-intro-image img {
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+
+  .infant-formula-page .subpage-lead {
+    margin-bottom: 28px;
+    text-align: left;
+  }
+
+  .infant-intro-image {
+    margin-bottom: 28px;
+  }
+
+  .infant-category-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 36px;
+  }
+
+  .infant-category-card img {
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+
+  .infant-stage-section {
+    padding-bottom: 34px;
+  }
+
+  .infant-stage-section h2 {
+    margin-bottom: 22px;
+    font-size: 21px;
+  }
+
+  .infant-product-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    align-items: start;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+
+  .infant-product-row__media img {
+    width: auto;
+    max-width: 220px;
+    max-height: 300px;
+  }
+
+  .infant-product-row__body h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .infant-formula-page .infant-product-main {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .infant-formula-page .infant-product-hero,
+  .infant-formula-page .infant-product-content,
+  .infant-intro-image,
+  .infant-category-grid,
+  .infant-stage-section,
+  .infant-product-row,
+  .infant-product-row__body {
+    width: min(320px, calc(100vw - 36px));
+    max-width: min(320px, calc(100vw - 36px));
+  }
+
+  .infant-product-row__body,
+  .infant-product-row__body p {
+    overflow-wrap: anywhere;
+  }
+}
+
 @media (min-width: 769px) {
   .certification-page .quality-grid {
     display: flex;
